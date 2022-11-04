@@ -1,4 +1,11 @@
 # Starter pipeline
+- task: AzureFunctionApp@1
+  inputs:
+    azureSubscription: 'Azure subscription 1(31cebd98-2e89-40ed-9851-2404fcc0a21c)'
+    appType: 'functionApp'
+    appName: 'SocialChatAPI'
+    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    deploymentMethod: 'auto'
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
